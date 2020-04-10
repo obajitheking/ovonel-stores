@@ -1,0 +1,125 @@
+body {
+    background-color: blueviolet;
+    font-size: 18px;
+    width: 100%;
+}
+
+
+.container {
+    display: grid;
+    grid-template-columns: 60% 40% ;
+    grid-column-gap: 1em;
+    margin: 4em;
+    height: 700px;
+    padding: 4em;
+    background: cornsilk;
+    border-radius: 30px;
+}
+
+.for {
+    width: 310px;
+    height: 30px;
+    border-color: white;
+    
+  
+}
+
+.log {
+    text-decoration: none;
+    background: rgb(54, 54, 156);
+    color: white;
+    width: calc(100% 10em);
+    padding: .5em 8em;
+}
+
+.con {
+    padding-top: 3em;
+}
+
+.forg {
+    padding-top: 1em;
+    padding-left: 4em;
+}
+
+.rem {
+    padding-top: 3em;
+}
+
+#home {
+    padding-top: 1em;
+}
+
+h1 {
+    font-size: 40px;
+    
+}
+
+#my-form {
+    padding-top: 1em;
+}
+
+a:hover {
+    color: red;
+}
+
+a {
+    text-decoration: none;
+}
+
+.app {
+    margin-left: 36em;
+    margin-bottom: 20em;
+
+}
+
+.grid-2 {
+    padding-left: 1em;
+}
+
+@media screen and (min-width: 320px) {
+    .container {
+        display: grid;
+        grid-template-rows: 60% 40% ;
+        grid-column-gap: 1em;
+        margin: 2em;
+        height: 1400px;
+        padding: 2em;
+        background: cornsilk;
+        border-radius: 30px;
+        width: 920px;
+        padding-top: 30em;
+    }
+
+    .grid-2 {
+
+    }
+
+    body {
+        font-size: 18px;
+    }
+
+    .app {
+        margin-left: 20em;
+        margin-bottom: 10em;
+    }
+}    
+
+
+@media screen and (min-width: 800px) {
+    .container {
+        display: grid;
+        grid-template-columns: 60% 40% ;
+        grid-column-gap: 1em;
+        margin: 4em;
+        height: 700px;
+        padding: 4em;
+        background: cornsilk;
+        border-radius: 30px;
+    }
+
+    .app {
+        margin-left: 36em;
+        margin-bottom: 20em;
+      
+    }
+}
