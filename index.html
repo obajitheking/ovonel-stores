@@ -3,50 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign-Up</title>
+    <title>TODO List</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/a5d526e9d5.js" crossorigin="anonymous"></script> 
 </head>
 <body>
-    <div class="container">
-        <div class="grid-1">
-            <img src="illustration-intro.png" width="600px" class="ill">
-        </div>
-        <div class="grid-2">
-            <h1>Hello,</h1>
-            <h1>Welcome back</h1>
-            <form action="process.php" id="home">
-                <input type="text" name="username" placeholder="Username or Email" class="for">
-                <br>
-                <br>
-                <input type="text" name="password" placeholder="Password" class="for">
-                <br>
-            </form>
-            <br>
-    
-            <form id="my-form">        
-                <label><input type="checkbox" name="remember">Remember me</label>
-                <a href="#" class="forg">Forgot password?</a> 
-            </form>
-           
-            <br>
-
-            <a href="#" class="log">Login</a>
-
-           <p class="con">
-            Dont have an account?<a href="#">Click here</a>   
-           </p> 
-
-            </div>
-
-           
-
-        </div>
-
-
-    
+    <h1><span class="style">TODO</span>List</h1>
+    <div class="box">
+        <input type="text" class="mess" placeholder="What Do You Want to Do...">
+        <button class="addButton"><i class="fas fa-plus icon"></i></button>
     </div>
-
-
-    
+    <div class="container">  
+    <!---
+        <div class="item">
+            <input type="text" class="item_input" disabled>
+            <button class="editButton">EDIT</button>
+            <button class="removeButton">REMOVE</button>
+        </div>
+    -->    
+    </div>
+    <script type="text/javascript" src="main.js"></script>
 </body>
 </html>
