@@ -1,104 +1,69 @@
 * {
-    padding: 0;
     margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
 body {
-   background-color: rgb(22, 21, 21);
-    font-family: Arial, Helvetica, sans-serif;
-} 
-
-h1 {
-    font-size: 3rem;
-    text-align: center;
-    font-weight: 50;
-    margin: 1rem 0 3rem;
-    color: #fff;
-
-}
-
-.style {
-    color: lime;
-    font-weight: 800;
-}
-
-.box {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
-
-.mess {
-    padding: 0.5rem 1rem;
-    height: 50px;
-    outline: none;
-    background-color: white;
-    width: 400px;
-    font-size: 1.15rem;
-    margin: 0.25rem;
-    border-radius: 25px;
-    border: none;
-}
-
-.addButton {
-    height: 50px;
-    width: 50px;
-    border-radius: 25px;
-    outline: none;
-    border: none;
-    background-color: lime;
-    color: white;
-    margin: 0.25px;
-}
-
-.addButton:hover {
-    cursor: pointer;
-    opacity: 0.7;
+    background-color: grey;
 }
 
 .container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
     text-align: center;
-    margin-top: 2rem;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
-.item {
-    padding: 0.5rem;
-    margin-bottom: 1.5rem;
-    border-bottom: 4px solid #fff;
+.container h1 {
+    margin-top: 3rem;
 }
 
-.item_input {
-    background: none;
-    outline: none;
-    color: #fff;
+input[type="text"] {
+    height: 50px;
+    width: 600px;
+    margin: 100px 0;
+    border-radius: 2px;
+    padding: 7px;
     border: none;
-    width: 250px;
-    font-size: 1.4rem;
+    background-color: #e7e7e7;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 1.5rem;
 }
 
-.editButton {
-    color: lime;
+input[type="submit"] {
+    height: 50px;
+    width: 100px;
+    margin: 100px 0;
+    border-radius: 2px;
+    padding: 7px;
     border: none;
-    font-size: 1rem;
-    margin: 0 0.5rem;
-    background: none;
-    outline: none;
+    background-color: black;
+    color: #e7e7e7;
+    font-weight: bold;
     cursor: pointer;
 }
 
-.removeButton {
-    color: red;
-    border: none;
-    font-size: 1rem;
-    margin: 0 0.5rem;
-    background: none;
-    outline: none;
-    cursor: pointer;
+
+.para {
+    background-color: #e7e7e7;
+    text-align: center;
+    height: 300px;
+    margin-left: 200px;
+    margin-right: 200px;
+    padding-top: 70px;
 }
 
+p {
+    font-size: 50px;
+}
+
+.desc {
+    text-transform: uppercase;
+}
+
+
+@media only screen and (max-width: 320px) {
+    .para{
+        background-color: grey;
+    }
+}

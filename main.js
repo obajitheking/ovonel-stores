@@ -1,71 +1,26 @@
-const addButton = document.querySelector('.addButton')
-var input = document.querySelector('.mess')
-const container = document.querySelector('.container')
-
-class item {
-    constructor(itemName) {
-
-        this.createDiv(itemName);
-    }
-    
-    createDiv(itemName) {
-        let input = document.createElement('input');
-        input.value = itemName;
-        input.disabled = true;
-        input.classList.add('item_input');
-        input.type = "text";
-
-        let itemBox = document.createElement('div');
-        itemBox.classList.add('item');
-
-        let editButton = document.createElement('button');
-        editButton.innerHTML = "EDIT";
-        editButton.classList.add('editButton');   
-     
-        let removeButton = document.createElement('button');
-        removeButton.innerHTML = "REMOVE"
-        removeButton.classList.add('removeButton'); 
-
-        container.appendChild(itemBox);
-
-        itemBox.appendChild(input);
-        itemBox.appendChild(editButton);
-        itemBox.appendChild(removeButton);
-
-        editButton.addEventListener('click', () => this.edit(input));
-
-        removeButton.addEventListener('click', () => this.remove(itemBox))
-
-    }    
+var button = document.querySelector('.btn');
+var inputValue = document.querySelector('.inputValue');
+var name = document.querySelector('.name');
+var temp = document.querySelector('.temp');
+var desc = document.querySelector('.desc');
 
 
-    edit(input){
-        input.disabled = !input.disabled;
-    }
+button.addEventListener('click', function(){
+    fetch('https://api.openweathermap.org/data/2.5/weather?q='+inputValue.value+'&appid=fd2128ba33dcee916d081709714e5519')
+    .then(response => response.json())
+    .then(data =>  {
+        var nameValue = data['name'];
+        var temValue = data['main']['temp'];
+        var descValue = data['weather'][0]['description'];
 
-    remove(item){
-        container.removeChild(item);
-    }
+        var teamValue = temValue - 273.15;
 
-}
+        var tempValue = (Math.round(teamValue * 100) / 100).toFixed(2);
 
+        name.innerHTML = nameValue;
+        temp.innerHTML = tempValue + '&deg' + 'C'
+        desc.innerHTML = descValue;
+    })
 
-function check(){
-    if(input.value != ""){
-        new item(input.value);
-        input.value = "";
-    }
-  }
-
-  
-
-
-addButton.addEventListener("click", check);
-  
-
-window.addEventListener('keydown', (e) =>{
-    if(e.which == 13){
-        check();
-    }
+.catch(err => alert('Wrong city name!'))
 })
- 

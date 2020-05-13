@@ -3,25 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TODO List</title>
     <link rel="stylesheet" href="style.css">
-    <script src="https://kit.fontawesome.com/a5d526e9d5.js" crossorigin="anonymous"></script> 
+    <title>Weather App</title>
 </head>
 <body>
-    <h1><span class="style">TODO</span>List</h1>
-    <div class="box">
-        <input type="text" class="mess" placeholder="What Do You Want to Do...">
-        <button class="addButton"><i class="fas fa-plus icon"></i></button>
+    <div class="container">
+        <h1>Weather App</h1>
+
+        <input type="text" class="inputValue" placeholder="Enter a City">
+        <input type="submit" class="btn" value="Get Weather">
     </div>
-    <div class="container">  
-    <!---
-        <div class="item">
-            <input type="text" class="item_input" disabled>
-            <button class="editButton">EDIT</button>
-            <button class="removeButton">REMOVE</button>
-        </div>
-    -->    
+    
+    <div class="para">
+        <h1 class="name"></h1>
+        <p class="temp"></p>
+        <p class="desc"></p>
     </div>
-    <script type="text/javascript" src="main.js"></script>
+    
+
+    <script src="main.js"></script>
 </body>
 </html>
