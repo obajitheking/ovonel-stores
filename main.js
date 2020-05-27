@@ -1,26 +1,52 @@
-var button = document.querySelector('.btn');
-var inputValue = document.querySelector('.inputValue');
-var name = document.querySelector('.name');
-var temp = document.querySelector('.temp');
-var desc = document.querySelector('.desc');
+let quotes = [
+    {
+        "quote": "Believe in yourself! Have faith in your abilities!" + "<br>" + "Without a humble but reasonable confidence in your own powers you cannot be successful or happy.",
+        "author": "Norman Vincent Peale"
+    }, {
+        "quote": "Press forward. Do not stop, do not linger in your journey,but strive for the mark set before you.",
+        "author": "George Whitefield"
+    }, {
+        "quote": "The future belongs to those who believe in the beauty of their dreams.",
+        "author": "Eleanor Roosevelt"
+    }, {
+        "quote": "Aim for the moon. If you miss, you may hit a star",
+        "author": "W. Clement Stone"
+    }, {
+        "quote": "Never look back unless you're planning to go that way.",
+        "author": "Henry David Thoreau"
+    }, {
+        "quote": "There are chords in the heart of the most reckless which cannot be touched without emotion.",
+        "author": "Edgar Allan Poe"
+    }, {
+        "quote": "Toba doko wa ma lole, Bye Bye.",
+        "author": "Naira Marley"
+    }, {
+        "quote": "Live as, everyday is your last.",
+        "author": "Edgar The King"
+    }
+    
+]
+
+var time = 3000; 
+var i = 0;
+const btn = document.getElementById("btn");
+const quote = document.getElementById("quote");
+const author = document.getElementById("author");
 
 
-button.addEventListener('click', function(){
-    fetch('https://api.openweathermap.org/data/2.5/weather?q='+inputValue.value+'&appid=fd2128ba33dcee916d081709714e5519')
-    .then(response => response.json())
-    .then(data =>  {
-        var nameValue = data['name'];
-        var temValue = data['main']['temp'];
-        var descValue = data['weather'][0]['description'];
 
-        var teamValue = temValue - 273.15;
+btn.addEventListener('click', getQuote);
 
-        var tempValue = (Math.round(teamValue * 100) / 100).toFixed(2);
+function getQuote() {
 
-        name.innerHTML = nameValue;
-        temp.innerHTML = tempValue + '&deg' + 'C'
-        desc.innerHTML = descValue;
-    })
+    let number = Math.floor(Math.random() * quotes.length);
 
-.catch(err => alert('Wrong city name!'))
-})
+    quote.innerHTML = '<span>"</span>' + quotes[number].quote + '<span>"</span>';
+    author.innerHTML = '<span>--</span>' + quotes[number].author; 
+    
+
+    setTimeout("changeImg", time);
+
+}
+
+
