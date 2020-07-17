@@ -1,44 +1,15 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+.row {
+    margin-top: 2rem;
 }
 
-body {
-    background-color:black;
-    text-align: center;
-    
+.header {
+    background-color: #C0C0C0;
 }
 
-.container {
-    padding: 100px;
-    background-color: skyblue;
-    margin: 50px 70px;
-    min-height: 50vh;
-
+.custom {
+    padding: 10%;
 }
 
-h1 {
-    font-size: 50px;
-}
-
-#author {
-    padding-top: 30px;
-    font-size: 20px;
-}
-
-#btn {
-    margin-top: 30px;
-    padding: 15px;
-    border-radius: 20px;
-    border: none;
-    background-color: darksalmon;
-    color: white;
-    font-weight: bold;
-    font-size: 15px;
-}
-
-#btn:hover {
-    cursor: pointer;
-    opacity: 0.7;
+.quality {
+    padding: 5%;
 }
