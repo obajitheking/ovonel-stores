@@ -2,6 +2,10 @@
     margin-top: 2rem;
 }
 
+img {
+    max-width: 100%;
+}
+
 .header {
     background-color: #C0C0C0;
 }
