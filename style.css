@@ -3,8 +3,79 @@
     background-color: #C0C0C0;
 }
 
+.qua {
+    color: red;
+}
+.cla {
+    color: pink;
+}
+
 .custom {
     padding: 15%;
+}
+
+.sec1 {
+    color: white;
+}
+
+.btnsec {
+    margin-top: 10%;
+}
+
+.sec1 {
+    font-family: 'Lexend Zetta', sans-serif;
+}
+
+.sec1 h1 {
+    opacity: 0;
+    animation-name: slow;
+    animation-duration: 3s;
+    animation-delay: 1s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+.sec1 p {
+    opacity: 0;
+    margin-top: 10%;
+    animation-name: slower;
+    animation-duration: 3s;
+    animation-delay: 2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+.sec1 button {
+    opacity: 0;
+    animation-name: slowest;
+    animation-duration: 3s;
+    animation-delay: 3s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+.sec1 img {
+    opacity: 0;
+    animation-name: slowest;
+    animation-duration: 1s;
+    animation-delay: 3s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes slowest {
+    from {opacity:0.3;}
+    to {opacity: 1.0;}
+}
+
+@keyframes slower {
+    from {opacity:0.3;}
+    to {opacity: 1.0;}
+}
+
+@keyframes slow {
+    from {opacity:0.3;}
+    to {opacity: 1.0;}
 }
 
 .quality {
@@ -13,7 +84,7 @@
 
 .navbar-brand {
 	font-weight: bold;
-	font-size: 2.5rem;
+	font-size: 2rem;
 }
 
 .loc {
@@ -25,10 +96,11 @@
     font-weight: 500;
 }
 .pac h1 {
-    font-size: 2.5rem;
-    mar
+    font-size: 2rem;
+    color: white;
+    
 }
 
 .pac {
-	background-color: lightslategray;
+    background-color: lightslategray;
 }
