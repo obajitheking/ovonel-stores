@@ -17,10 +17,11 @@
 .row1 {
     display: grid;
     height: 100vh;
-    grid-gap: 20px;
-   
+    grid-gap: 25px;
+    grid-template-columns: 2fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr ;
     grid-template-areas: 
-    "p p1 p2 "
+    "p p1 p2"
     "p p1 p3 "
 }
 
@@ -46,6 +47,10 @@
     height: 600px;
 }
 
+.p:hover, .p1:hover, .p2:hover, .p3:hover {
+    opacity: 0.9;
+}
+
 .p1 {
     grid-area: p1;
     height: 600px;
@@ -58,7 +63,8 @@
 
 .p3 {
     grid-area: p3;
-    height: 300px;
+    height: 260px;
+    width: 300px;
 }
 
 .sec1 {
@@ -81,6 +87,10 @@
 }
 
 .sec2 {
+    margin-top: 5%;
+}
+
+.sec3 {
     margin-top: 5%;
 }
 
@@ -197,6 +207,11 @@
             "p3"
     }
 
+    .p,.p1,.p2,.p3 {
+        width: 450px;
+        height: 450px;
+        margin-left: 2%;
+    }
 }
 
 @media only screen and (max-width: 700px) {
